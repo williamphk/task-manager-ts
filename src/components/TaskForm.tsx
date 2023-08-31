@@ -9,7 +9,7 @@ const taskSchema = z.object({
     .string()
     .min(3, "Title should be at least 3 characters")
     .max(50, "Title should be at most 50 characters"),
-  dueDate: z.date(),
+  dueDate: z.coerce.date(),
   category: z.enum(categories),
 });
 
